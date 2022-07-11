@@ -40,7 +40,7 @@ function App() {
     // get provider from metamask
     const provider = new ethers.providers.Web3Provider( window.ethereum );
 
-    // set signer
+    // set signer :: abstraction of an etherium account used to sign messages and transactions and send signed transactions to Ethereum Network to execute state changing operations.
     const signer = provider.getSigner();
 
     window.ethereum.on( "chainChanged", ( ) => {
@@ -52,7 +52,7 @@ function App() {
     });
     
     // get access to deployed smart contract instances
-    loadContracts( signer ); // abstraction of an etherium account used to sign messages and transactions and send signed 
+    loadContracts( signer );
   };
 
   const loadContracts = async ( signer ) => {
