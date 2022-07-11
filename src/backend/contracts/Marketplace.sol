@@ -46,7 +46,8 @@ contract Marketplace is ReentrancyGuard {
             feePercent = _feePercent;
         }
 
-        function makeItem( IERC721 _nft, uint _tokenId, uint _price ) external nonReentrant {
+        function makeItem( IERC721 _nft, uint _tokenId, uint _price ) external nonReentrant { 
+            // nonReentrant prevents any other function from being executed while this executes by locking the contract.
             require( _price > 0, "Price must be greater than zero");
 
             //increment tokenCount

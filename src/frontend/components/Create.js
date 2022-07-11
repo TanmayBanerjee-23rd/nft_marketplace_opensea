@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { ethers } from "ethers";
 import { Row, Form, Button } from 'react-bootstrap';
 import { create as ipfsHttpClient } from 'ipfs-http-client';
+
+// IPFS ( InterPlanetray File System ) is a protocol and peer-to-peer network for storing and sharing data in a distributed file system.
+// It uses content-addressing to uniquely identify each file in a global namespace connecting all computing devices.
+// URL is the running instance of IPFS HTTP RPC API
 const client = ipfsHttpClient( 'https://ipfs.infura.io:5001/api/v0' );
 
 const Create = ( { marketplace, nft } ) => {

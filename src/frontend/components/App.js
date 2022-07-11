@@ -52,7 +52,7 @@ function App() {
     });
     
     // get access to deployed smart contract instances
-    loadContracts( signer );
+    loadContracts( signer ); // abstraction of an etherium account used to sign messages and transactions and send signed 
   };
 
   const loadContracts = async ( signer ) => {
